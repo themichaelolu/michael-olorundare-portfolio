@@ -1,26 +1,129 @@
 @import "tailwindcss";
 
-/* Optional: use .dark class instead of prefers-color-scheme */
+/* Use .dark class instead of prefers-color-scheme */
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  /* Colors */
-  --color-primary: #137fec;
-  --color-background-light: #f6f7f8;
-  --color-background-dark: #101922;
+  /* Core palette */
+  --color-primary: #6366f1;          /* indigo-500 */
+  --color-primary-hover: #4f46e5;    /* indigo-600 */
+  --color-accent: #f472b6;           /* pink-400 */
 
-  /* Font family */
-  --font-display: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --color-background-light: #fafafa;
+  --color-background-dark: #05060a;
+  --color-surface-light: #ffffff;
+  --color-surface-dark: #0b0d14;
 
-  /* Border radius – used by rounded, rounded-lg, etc. */
-  --radius: 0.25rem;      /* rounded */
-  --radius-lg: 0.5rem;    /* rounded-lg */
-  --radius-xl: 0.75rem;   /* rounded-xl */
-  --radius-full: 9999px;  /* rounded-full */
+  /* VOYA brand (sampled from voyavisa.io) */
+  --color-voya-bg: #060d0e;
+  --color-voya-accent: #4d65ff;
+
+  /* Fonts — Archivo (display) + Space Grotesk (body) per design system */
+  --font-display: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", monospace;
+
+  /* Radii */
+  --radius: 0.375rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
 }
 
-/* Global body styling (optional but nice) */
+/* Smooth scrolling + base */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   background-color: var(--color-background-light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.45);
+}
+
+/* Gradient text utility */
+.text-gradient {
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Slow spin for decorative rings */
+@keyframes slow-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-slow-spin {
+  animation: slow-spin 24s linear infinite;
+}
+
+/* Fade up */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+/* Shimmering border used on featured project card */
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+.animate-shimmer {
+  background-size: 200% 200%;
+  animation: shimmer 6s linear infinite;
+}
+
+/* Subtle grid background */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(99,102,241,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99,102,241,0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.dark .bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(148,163,184,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148,163,184,0.06) 1px, transparent 1px);
 }
