@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#05060a"/>
+      <stop offset="100%" style="stop-color:#0b0d14"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="50%" style="stop-color:#a855f7"/>
+      <stop offset="100%" style="stop-color:#ec4899"/>
+    </linearGradient>
+    <!-- Subtle grid -->
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(148,163,184,0.06)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Glow blobs -->
+  <ellipse cx="200" cy="150" rx="300" ry="200" fill="#6366f1" opacity="0.07"/>
+  <ellipse cx="1000" cy="480" rx="250" ry="180" fill="#a855f7" opacity="0.07"/>
+
+  <!-- Accent bar -->
+  <rect x="80" y="240" width="6" height="80" rx="3" fill="url(#accent)"/>
+
+  <!-- Name -->
+  <text x="108" y="296" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="800" letter-spacing="-2" fill="white">Michael Olorundare</text>
+
+  <!-- Role -->
+  <text x="108" y="352" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="400" fill="#94a3b8">Mobile Engineer (Flutter)</text>
+
+  <!-- Tag pill -->
+  <rect x="108" y="390" width="200" height="36" rx="18" fill="rgba(99,102,241,0.2)" stroke="rgba(99,102,241,0.4)" stroke-width="1"/>
+  <text x="208" y="413" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#818cf8">Lagos, Nigeria</text>
+
+  <!-- Divider -->
+  <line x1="80" y1="460" x2="540" y2="460" stroke="rgba(148,163,184,0.12)" stroke-width="1"/>
+
+  <!-- URL -->
+  <text x="80" y="495" font-family="ui-monospace, monospace" font-size="18" fill="#475569">https://michael-olorundare-portfolio.vercel.app/</text>
+
+  <!-- Flutter logo hint (F) -->
+  <rect x="1040" y="220" width="80" height="80" rx="16" fill="rgba(99,102,241,0.15)" stroke="rgba(99,102,241,0.3)" stroke-width="1"/>
+  <text x="1080" y="275" text-anchor="middle" font-family="system-ui" font-size="40" font-weight="700" fill="url(#accent)">F</text>
+</svg>
