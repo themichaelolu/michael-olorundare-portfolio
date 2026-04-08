@@ -92,7 +92,7 @@ const projectsData = [
   {
     title: "Getteasy",
     dates: "Feb 2024 — Aug 2024",
-    role: "Flutter UI Engineer",
+    role: "Flutter Engineer",
     problem:
       "A hospitality startup had detailed Figma designs but no mobile implementation — they needed pixel-exact Flutter screens fast, with a reusable component system for future iteration.",
     solution:
@@ -137,7 +137,7 @@ const projectsData = [
 const experienceData = [
   {
     period: "2023 — Present",
-    title: "Flutter Mobile Engineer",
+    title: "Mobile Engineer",
     company: "Cyberspace Limited",
     description:
       "Lead Flutter engineer on production apps serving thousands of users across enterprise and professional sectors. Own the full delivery cycle: architecture, feature implementation, API integration, and Play Store deployment.",
@@ -151,7 +151,7 @@ const experienceData = [
   },
   {
     period: "Dec 2025 — Mar 2026",
-    title: "Flutter Feature Engineer",
+    title: "Mobile Engineer",
     company: "VOYA (Contract)",
     description:
       "Contracted to ship two high-priority features for a global travel and visa platform ahead of a major user acquisition push.",
@@ -163,7 +163,7 @@ const experienceData = [
   },
   {
     period: "Feb 2024 — Aug 2024",
-    title: "Flutter UI Engineer",
+    title: "Mobile Engineer",
     company: "Getteasy (Contract)",
     description:
       "Delivered the complete mobile UI for a hospitality startup — from empty repo to Play Store — working directly from Figma assets.",
@@ -183,48 +183,132 @@ const experienceData = [
   },
 ];
 
-const aboutSkills = [
+const skillCategories = [
   {
-    name: "Flutter",
-    icon: <img src={flutterLogo} alt="" className="w-5 h-5" />,
-  },
-  { name: "Dart", icon: <img src={dartLogo} alt="" className="w-5 h-5" /> },
-  {
-    name: "Clean Architecture",
-    icon: (
-      <svg
-        className="w-5 h-5"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        <rect x="3" y="3" width="18" height="4" rx="1" />
-        <rect x="3" y="10" width="18" height="4" rx="1" />
-        <rect x="3" y="17" width="18" height="4" rx="1" />
-      </svg>
-    ),
+    category: "Mobile Development",
+    items: [
+      { name: "Flutter (Dart)", icon: <img src={flutterLogo} alt="" className="w-4 h-4" /> },
+      { name: "Dart", icon: <img src={dartLogo} alt="" className="w-4 h-4" /> },
+      {
+        name: "REST API Integration",
+        icon: (
+          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+          </svg>
+        ),
+      },
+      { name: "Firebase", icon: <img src={firebaseLogo} alt="" className="w-4 h-4" /> },
+    ],
   },
   {
-    name: "REST APIs · Firebase",
-    icon: <img src={firebaseLogo} alt="" className="w-5 h-5" />,
+    category: "Architecture & State",
+    items: [
+      {
+        name: "Clean Architecture",
+        icon: (
+          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="4" rx="1"/><rect x="3" y="10" width="18" height="4" rx="1"/><rect x="3" y="17" width="18" height="4" rx="1"/>
+          </svg>
+        ),
+      },
+      {
+        name: "Riverpod",
+        icon: (
+          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
+          </svg>
+        ),
+      },
+      {
+        name: "Dependency Injection",
+        icon: (
+          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+          </svg>
+        ),
+      },
+      {
+        name: "Repository Pattern",
+        icon: (
+          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+          </svg>
+        ),
+      },
+    ],
   },
   {
-    name: "Figma → Flutter UI",
-    icon: <img src={figmaLogo} alt="" className="w-5 h-5" />,
-  },
-  {
-    name: "Git · GitHub · CI/CD",
-    icon: <img src={githubLogo} alt="" className="w-5 h-5" />,
+    category: "Tools",
+    items: [
+      { name: "Git & GitHub", icon: <img src={githubLogo} alt="" className="w-4 h-4" /> },
+      {
+        name: "Postman",
+        icon: (
+          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M13.527.099C6.04.099 0 6.139 0 13.626c0 7.487 6.04 13.527 13.527 13.527 7.487 0 13.527-6.04 13.527-13.527C27.054 6.139 21.014.099 13.527.099zm0 24.979C6.79 25.078 1.175 19.463 1.175 12.726S6.79.374 13.527.374s12.352 5.615 12.352 12.352-5.615 12.352-12.352 12.352zm5.087-14.15l-5.942 5.942-4.637-4.637a.587.587 0 0 0-.83.83l5.052 5.052a.587.587 0 0 0 .83 0l6.357-6.357a.587.587 0 1 0-.83-.83z"/>
+          </svg>
+        ),
+      },
+      { name: "Figma", icon: <img src={figmaLogo} alt="" className="w-4 h-4" /> },
+      {
+        name: "CI/CD · GitHub Actions",
+        icon: (
+          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/>
+          </svg>
+        ),
+      },
+    ],
   },
 ];
+
+// Legacy flat list kept for any component that still references it
+const aboutSkills = skillCategories.flatMap((c) => c.items);
 
 /* ================================================================== */
 /*  Hooks                                                               */
 /* ================================================================== */
+
+/* Intersection Observer scroll-reveal hook */
+const useReveal = (options = {}) => {
+  const ref = React.useRef(null);
+  const [visible, setVisible] = React.useState(false);
+  React.useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.08, rootMargin: "0px 0px -48px 0px", ...options }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+  return [ref, visible];
+};
+
+/* Reveal wrapper — fades + slides up when it enters the viewport */
+const Reveal = ({ children, delay = 0, className = "" }) => {
+  const [ref, visible] = useReveal();
+  return (
+    <div
+      ref={ref}
+      className={className}
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(24px)",
+        transition: `opacity 0.6s ease-out ${delay}ms, transform 0.6s ease-out ${delay}ms`,
+      }}
+    >
+      {children}
+    </div>
+  );
+};
 
 const useDarkMode = () => {
   const [dark, setDark] = React.useState(() => {
@@ -436,11 +520,41 @@ const Header = ({ details, dark, setDark }) => {
 /*  Hero                                                                */
 /* ================================================================== */
 
+/* Cycles through words with a smooth crossfade every 2.4s */
+const WordCycle = ({ words }) => {
+  const [idx, setIdx] = React.useState(0);
+  const [show, setShow] = React.useState(true);
+
+  React.useEffect(() => {
+    const id = setInterval(() => {
+      setShow(false);
+      setTimeout(() => {
+        setIdx((i) => (i + 1) % words.length);
+        setShow(true);
+      }, 280);
+    }, 2600);
+    return () => clearInterval(id);
+  }, [words.length]);
+
+  return (
+    <span
+      className="text-gradient"
+      style={{ transition: "opacity 0.28s ease", opacity: show ? 1 : 0 }}
+    >
+      {words[idx]}
+    </span>
+  );
+};
+
 const Hero = ({ details }) => (
-  <section id="hero" className="relative w-full py-20 sm:py-28">
-    <div className="relative flex flex-col items-center text-center gap-8 max-w-3xl mx-auto animate-fade-up">
+  <section id="hero" className="relative w-full py-24 sm:py-32">
+    <div className="relative flex flex-col items-center text-center gap-8 max-w-4xl mx-auto overflow-hidden">
+
       {/* Status badge */}
-      <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 dark:border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 px-3 py-1.5 backdrop-blur">
+      <div
+        className="inline-flex items-center gap-2 rounded-full border border-emerald-200 dark:border-emerald-500/30 bg-emerald-50 dark:bg-emerald-500/10 px-3 py-1.5 backdrop-blur"
+        style={{ animation: "fade-up 0.5s ease-out both", animationDelay: "0ms" }}
+      >
         <span className="relative flex h-2 w-2">
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
           <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
@@ -450,24 +564,45 @@ const Hero = ({ details }) => (
         </span>
       </div>
 
-      <h1 className="font-display text-5xl sm:text-6xl md:text-7xl font-black leading-[1.02] tracking-tight text-slate-900 dark:text-white">
-        Flutter apps. <span className="text-gradient">Clean code.</span>
-        <br className="hidden sm:block" /> Real users.
+      {/* Headline — three staggered lines */}
+      <h1 className="font-display font-black tracking-tight text-slate-900 dark:text-white">
+        <span
+          className="block text-4xl sm:text-5xl md:text-6xl text-slate-500 dark:text-slate-400 font-semibold mb-1"
+          style={{ animation: "fade-up 0.55s ease-out both", animationDelay: "80ms" }}
+        >
+      
+        </span>
+        <span
+          className="block text-5xl sm:text-7xl md:text-8xl leading-[1.0] mb-2"
+          style={{ animation: "fade-up 0.55s ease-out both", animationDelay: "180ms" }}
+        >
+          I build apps
+        </span>
+        <span
+          className="block text-5xl sm:text-7xl md:text-8xl leading-[1.0]"
+          style={{ animation: "fade-up 0.55s ease-out both", animationDelay: "280ms" }}
+        >
+          that{" "}
+          <WordCycle words={["ship.", "scale.", "last.", "work."]} />
+        </span>
       </h1>
 
-      <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
-        I'm{" "}
-        <span className="font-semibold text-slate-900 dark:text-white">
-          {details.name}
-        </span>
-        , a <span className="font-semibold text-primary">{details.role}</span>{" "}
-        building production Android & iOS apps with Clean Architecture,
-        Riverpod, and a track record of shipping to real users on the Play
-        Store.
+      {/* Subheadline */}
+      <p
+        className="text-base sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed"
+        style={{ animation: "fade-up 0.55s ease-out both", animationDelay: "380ms" }}
+      >
+        Production-ready Android & iOS apps — built with{" "}
+        <span className="font-semibold text-slate-900 dark:text-white">Clean Architecture</span>,{" "}
+        <span className="font-semibold text-slate-900 dark:text-white">Riverpod</span>, and a
+        track record of shipping to real users on the Play Store.
       </p>
 
       {/* CTAs */}
-      <div className="flex flex-wrap justify-center gap-3">
+      <div
+        className="flex flex-wrap justify-center gap-3"
+        style={{ animation: "fade-up 0.55s ease-out both", animationDelay: "460ms" }}
+      >
         <a
           href="#projects"
           className="group cursor-pointer inline-flex items-center gap-2 rounded-full bg-slate-900 dark:bg-white px-6 py-3 text-sm font-semibold text-white dark:text-slate-900 shadow-lg shadow-slate-900/20 dark:shadow-white/10 hover:bg-primary dark:hover:bg-primary dark:hover:text-white transition-colors duration-200"
@@ -521,23 +656,29 @@ const Hero = ({ details }) => (
       </div>
 
       {/* Skill chips */}
-      <div className="flex flex-wrap justify-center gap-2 pt-1">
+      <div
+        className="flex flex-wrap justify-center gap-2 pt-1"
+        style={{ animation: "fade-up 0.55s ease-out both", animationDelay: "540ms" }}
+      >
         {details.skills.map((s) => (
           <Pill key={s}>{s}</Pill>
         ))}
       </div>
 
       {/* Stats strip */}
-      <div className="mt-8 grid grid-cols-3 gap-3 sm:gap-4 w-full max-w-xl">
+      <div
+        className="mt-4 grid grid-cols-3 gap-3 sm:gap-4 w-full max-w-xl"
+        style={{ animation: "fade-up 0.55s ease-out both", animationDelay: "620ms" }}
+      >
         {details.stats.map((s) => (
           <div
             key={s.label}
-            className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/60 p-4 backdrop-blur"
+            className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/60 p-4 sm:p-5 backdrop-blur text-left"
           >
-            <p className="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
+            <p className="font-display text-3xl sm:text-4xl font-black text-slate-900 dark:text-white leading-none">
               {s.value}
             </p>
-            <p className="text-[10px] sm:text-[11px] uppercase tracking-wider text-slate-600 dark:text-slate-400 mt-1">
+            <p className="text-[10px] sm:text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 mt-2 leading-tight">
               {s.label}
             </p>
           </div>
@@ -744,7 +885,9 @@ const ProjectsSection = ({ projects }) => (
     />
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {projects.map((p, i) => (
-        <ProjectCard key={p.title} project={p} index={i} />
+        <Reveal key={p.title} delay={i * 80}>
+          <ProjectCard project={p} index={i} />
+        </Reveal>
       ))}
     </div>
   </section>
@@ -764,15 +907,15 @@ const ExperienceSection = ({ experience }) => (
     />
     <div className="relative flex flex-col gap-6 border-l border-dashed border-slate-300 dark:border-slate-700 pl-8 ml-2">
       {experience.map((item, i) => (
+        <Reveal key={i} delay={i * 100}>
         <div
-          key={i}
           className="relative rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/60 p-6 backdrop-blur hover:border-primary/40 hover:shadow-lg transition-colors duration-300"
         >
           <span
             className="absolute -left-[42px] top-7 flex h-4 w-4 items-center justify-center"
             aria-hidden="true"
           >
-            <span className="absolute inline-flex h-full w-full rounded-full bg-primary/30 animate-ping" />
+            <span className="absolute inline-flex h-full w-full rounded-full bg-primary/20 ring-2 ring-primary/30" />
             <span className="relative inline-flex h-3 w-3 rounded-full bg-primary ring-4 ring-background-light dark:ring-background-dark" />
           </span>
 
@@ -805,6 +948,7 @@ const ExperienceSection = ({ experience }) => (
             </ul>
           )}
         </div>
+        </Reveal>
       ))}
     </div>
   </section>
@@ -823,6 +967,7 @@ const AboutSection = ({ details, skills }) => (
       description="Flutter engineer. Clean architecture advocate. Delivery-focused."
     />
 
+    <Reveal>
     <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
       {/* Bio */}
       <div className="lg:col-span-3 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/60 p-6 sm:p-8 backdrop-blur">
@@ -830,22 +975,35 @@ const AboutSection = ({ details, skills }) => (
           <p>
             I'm a{" "}
             <strong className="text-slate-900 dark:text-white">
-              Flutter Mobile Engineer
+              Flutter developer
             </strong>{" "}
-            with 3+ years of production delivery across Android and iOS. I
-            specialize in Clean Architecture, Riverpod state management, and
-            end-to-end app deployment — from first commit to Play Store listing.
+            focused on building scalable, maintainable mobile applications using
+            Clean Architecture and modern state management.
           </p>
           <p>
-            My production work includes{" "}
-            <em className="text-primary not-italic font-semibold">
-              CIPM Mobile Nigeria
-            </em>{" "}
-            (1,000+ active users),{" "}
-            <em className="text-primary not-italic font-semibold">VOYA</em>{" "}
-            (eSIM + ML Kit features for a global travel platform), and{" "}
-            <em className="text-primary not-italic font-semibold">Getteasy</em>.
-            I focus on writing maintainable code, not just working code.
+            I've developed and shipped real-world applications used by hundreds
+            of users, with experience integrating APIs, optimizing performance,
+            and structuring apps for long-term growth.
+          </p>
+          <div className="pt-1">
+            <p className="text-sm font-semibold text-slate-800 dark:text-slate-200 mb-2">
+              My approach emphasizes:
+            </p>
+            <ul className="space-y-1.5 text-sm">
+              {[
+                "Clear architecture (Presentation, Domain, Data layers)",
+                "Scalable state management with Riverpod",
+                "Maintainable and testable codebases",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <p className="font-semibold text-slate-900 dark:text-white border-t border-slate-200 dark:border-slate-800 pt-4 mt-1">
+            I don't just build apps — I build systems that scale.
           </p>
           <div className="flex items-center gap-3 pt-3 mt-2 border-t border-slate-200 dark:border-slate-800">
             <svg
@@ -869,33 +1027,74 @@ const AboutSection = ({ details, skills }) => (
       </div>
 
       {/* Skills */}
-      <div className="lg:col-span-2 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/60 p-6 sm:p-8 backdrop-blur">
-        <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-5">
-          Tech Stack
-        </h3>
-        <div className="grid grid-cols-1 gap-2">
-          {skills.map((s) => (
-            <div
-              key={s.name}
-              className="group flex items-center gap-3 rounded-xl border border-transparent hover:border-primary/30 hover:bg-primary/5 p-2.5 transition-colors duration-200"
-            >
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 group-hover:bg-primary/10 group-hover:text-primary transition-colors duration-200">
-                {s.icon}
-              </div>
-              <span className="text-sm font-medium text-slate-800 dark:text-slate-200">
-                {s.name}
-              </span>
+      <div className="lg:col-span-2 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/60 p-6 sm:p-8 backdrop-blur flex flex-col gap-6">
+        {skillCategories.map((cat) => (
+          <div key={cat.category}>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary mb-3">
+              {cat.category}
+            </p>
+            <div className="flex flex-col gap-1">
+              {cat.items.map((s) => (
+                <div
+                  key={s.name}
+                  className="group flex items-center gap-3 rounded-xl border border-transparent hover:border-primary/30 hover:bg-primary/5 px-2.5 py-2 transition-colors duration-200"
+                >
+                  <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 group-hover:bg-primary/10 group-hover:text-primary transition-colors duration-200 flex-shrink-0">
+                    {s.icon}
+                  </div>
+                  <span className="text-sm font-medium text-slate-800 dark:text-slate-200">
+                    {s.name}
+                  </span>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
+    </Reveal>
   </section>
 );
 
 /* ================================================================== */
 /*  Architecture & Approach                                             */
 /* ================================================================== */
+
+const architectureLayers = [
+  {
+    layer: "Presentation Layer",
+    description: "Flutter UI + Riverpod for reactive state management. Widgets are dumb — they observe state and dispatch events, nothing more.",
+    icon: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/>
+      </svg>
+    ),
+  },
+  {
+    layer: "Domain Layer",
+    description: "Business logic, use cases, and entities. Pure Dart — no Flutter dependencies, no framework coupling. Fully testable in isolation.",
+    icon: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="1" fill="currentColor"/>
+      </svg>
+    ),
+  },
+  {
+    layer: "Data Layer",
+    description: "Repository pattern, API services, and local caching. The only layer that knows about Firebase, REST, or SQLite — swappable without touching business logic.",
+    icon: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+      </svg>
+    ),
+  },
+];
+
+const architectureBenefits = [
+  { text: "Easier testing and debugging" },
+  { text: "Faster feature iteration" },
+  { text: "Clean separation of concerns" },
+];
 
 const architecturePillars = [
   {
@@ -1029,27 +1228,82 @@ const ArchitectureSection = () => (
     <SectionHeader
       number="04"
       eyebrow="Engineering Approach"
-      title="Architecture & Method"
-      description="The principles I apply consistently — from folder structure to deployment. Engineering decisions, not preferences."
+      title="Architecture & Approach"
+      description="I build applications with scalability and maintainability in mind."
     />
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {architecturePillars.map((pillar) => (
-        <div
-          key={pillar.title}
-          className="group rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/60 p-6 backdrop-blur hover:border-primary/40 hover:shadow-lg transition-colors duration-300"
-        >
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary mb-4 group-hover:bg-primary/20 transition-colors duration-200">
-            {pillar.icon}
+
+    <Reveal>
+    <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+      {/* Three-layer architecture */}
+      <div className="lg:col-span-3 flex flex-col gap-4">
+        <p className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1">
+          My standard architecture includes:
+        </p>
+        {architectureLayers.map((item, i) => (
+          <div
+            key={item.layer}
+            className="group relative rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/60 p-5 backdrop-blur hover:border-primary/40 hover:shadow-lg transition-colors duration-300 flex gap-4"
+          >
+            {/* Step number */}
+            <div className="flex-shrink-0 flex flex-col items-center gap-1">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors duration-200">
+                {item.icon}
+              </div>
+              {i < architectureLayers.length - 1 && (
+                <div className="w-px flex-1 min-h-[1.5rem] bg-gradient-to-b from-primary/30 to-transparent" />
+              )}
+            </div>
+            <div>
+              <h3 className="font-display text-base font-bold text-slate-900 dark:text-white mb-1">
+                {item.layer}
+              </h3>
+              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                {item.description}
+              </p>
+            </div>
           </div>
-          <h3 className="font-display text-base font-bold text-slate-900 dark:text-white mb-2">
-            {pillar.title}
-          </h3>
-          <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-            {pillar.description}
+        ))}
+      </div>
+
+      {/* Benefits + pillars */}
+      <div className="lg:col-span-2 flex flex-col gap-4">
+        {/* Benefits */}
+        <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-gradient-to-br from-primary/5 via-transparent to-purple-500/5 p-6 backdrop-blur">
+          <p className="text-sm font-semibold text-slate-800 dark:text-slate-200 mb-4">
+            This structure allows for:
           </p>
+          <ul className="space-y-3">
+            {architectureBenefits.map((b) => (
+              <li key={b.text} className="flex items-start gap-2.5 text-sm text-slate-700 dark:text-slate-300">
+                <svg className="w-4 h-4 mt-0.5 flex-shrink-0 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+                {b.text}
+              </li>
+            ))}
+          </ul>
         </div>
-      ))}
+
+        {/* Additional pillars */}
+        <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/60 p-6 backdrop-blur">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary mb-4">
+            Also applied
+          </p>
+          <div className="flex flex-col gap-3">
+            {architecturePillars.slice(3).map((pillar) => (
+              <div key={pillar.title} className="flex items-start gap-3">
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 text-primary flex-shrink-0">
+                  {pillar.icon}
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-slate-900 dark:text-white">{pillar.title}</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mt-0.5">{pillar.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
+    </Reveal>
   </section>
 );
 
