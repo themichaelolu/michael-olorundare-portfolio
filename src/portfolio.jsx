@@ -35,7 +35,7 @@ const personalDetails = {
     github: "https://github.com/themichaelolu",
     linkedin:
       "https://www.linkedin.com/in/michael-olorundare-a41335214/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    resume: "#",
+    resume: "https://drive.google.com/file/d/1lu2jPZD_QatIaoijn9ln6VqTP4uPYBpE/view?usp=sharing",
   },
 };
 
