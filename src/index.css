@@ -46,6 +46,11 @@ html {
   scroll-padding-top: 5rem;
 }
 
+/* Case-study pages add a sticky section nav under the header. */
+html:has(.case-study) {
+  scroll-padding-top: 7.5rem;
+}
+
 body {
   font-family: var(--font-body);
   background-color: var(--color-background-light);

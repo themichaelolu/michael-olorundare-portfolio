@@ -1,5 +1,7 @@
 {
   "rewrites": [
+    { "source": "/projects/serviceflow", "destination": "/projects/serviceflow/index.html" },
+    { "source": "/projects/serviceflow/", "destination": "/projects/serviceflow/index.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [
